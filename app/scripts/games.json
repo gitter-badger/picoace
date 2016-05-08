@@ -1,0 +1,28 @@
+{
+    "results": [{
+        "name": "Fiber Tree",
+        "system": "windows"
+    }, {
+        "name": "Frequon Invaders",
+        "system": " macintosh",
+        "favorite": true
+    }, {
+        "name": "Bloop",
+        "system": "flash"
+    }, {
+        "name": "Rock N Roller",
+        "system": "msx"
+    }, {
+        "name": "Puzzle Squares",
+        "system": "Atari ST"
+    }, {
+        "name": "Alien Crush",
+        "system": "psp"
+    }, {
+        "name": "Return Fire",
+        "system": "PlayStation"
+    }, {
+        "name": "Bonk!",
+        "system": "msx"
+    }]
+}

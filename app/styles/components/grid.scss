@@ -1,0 +1,79 @@
+.grid {
+    $gpd-win-scale-down: (3/4);
+    $grid-width: 1280px * $gpd-win-scale-down;
+    $grid-height: 720px * $gpd-win-scale-down;
+    // width: $grid-width;
+    max-width: $grid-width;
+    height: $grid-height;
+    min-height: $grid-height;
+    background: #333;
+    margin: 0 auto;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* clear fix */
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    &__item {
+        $base-factor: .46739130434; //(1/3);
+        $base-width: 225px;
+        $base-height: $base-width * $base-factor;
+        $spacing: 5px;
+        // position: relative;
+        float: left;
+        width: $base-width;
+        height: $base-height;
+        margin: $spacing;
+        padding: 7px;
+        background: red;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        overflow: hidden;
+
+        &.wide {
+            $scale: 2;
+            $scale-spacing: $spacing * ($scale * 2 - 2);
+            width: ($base-width * $scale) + $scale-spacing;
+            height: ($base-height * $scale) + $scale-spacing;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.is-dragging {
+            z-index: 2;
+        }
+
+        &:nth-child(4n+1) {
+            background: linear-gradient(to bottom right, #39ac99, #2d8677);
+        }
+
+        &:nth-child(4n+2) {
+            background: linear-gradient(to bottom right, #7339ac, #592d86);
+        }
+
+        &:nth-child(4n+3) {
+            background: linear-gradient(to bottom right, #ac4d39, #863c2d);
+        }
+
+        &:nth-child(4n+4) {
+            background: linear-gradient(to bottom right, #99ac39, #77862d);
+        }
+
+        &--highlight {
+            outline: 2px solid rgba(255, 255, 255, .75);
+            outline-offset: -2px;
+        }
+    }
+}
