@@ -1,5 +1,5 @@
 angular.module('initialisim', [])
-    .filter('initialisim', ($sce) => {
+    .filter('initialisim', function($sce) {
         return input => {
             if (input == null)
                 return "";

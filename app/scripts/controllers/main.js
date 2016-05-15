@@ -9,7 +9,7 @@
  */
 angular.module('myApp')
     .controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
-        $http.get('/scripts/games.json').then(resp => {
+        $http.get('/scripts/games.json').then(function(resp) {
             $scope.games = resp.data;
 
             setTimeout(function() {
